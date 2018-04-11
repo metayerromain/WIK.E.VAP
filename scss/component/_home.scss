@@ -1,0 +1,87 @@
+.is-Active{
+  &::after{
+    width: 72px !important;
+  }
+  &::before{
+    width: 72px !important;
+  }
+}
+.home {
+  &-img{
+    width: 75px;
+    position: absolute;
+    margin: 50% auto 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+  }
+  &-imgContainer{
+    border: 45px rgba(255,215,56,.83) solid;
+    border-radius: 50%;
+    width: 674px;
+    height: 674px;
+    position: relative;
+    &::before{
+      content: "";
+      display: block;
+      width: 0px;
+      height: 6px;
+      background-color: #000;
+      position: absolute;
+      top: 150px;
+      right: 20%;
+      transition: width 1s;
+    }
+    &::after{
+      content: "";
+      display: block;
+      width: 0px;
+      height: 6px;
+      background-color: #000;
+      position: absolute;
+      bottom: 150px;
+      left: 20%;
+      transition: width 1s;
+    }
+  }
+  &-content{
+    display: flex;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    width: 87%;
+  }
+  &-title{
+    font-family: "Montserrat";
+    font-weight: bolder;
+    font-size: 40px;
+    margin-bottom: 23vh;
+    width: 590px;
+    line-height: 150%;
+    position: relative;
+    &::after{
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -1;
+      margin-left: 100px;
+      width: 200px;
+      height: 20px;
+      bottom: 10px;
+      background-color: #FDE74C;
+      transition: height .3s;
+    }
+    &:hover:after{
+      height: 30px;
+    }
+  }
+  &-explication{
+    font-family: "raleway";
+    font-size: 16px;
+    width: 300px;
+    line-height: 150%;
+  }
+  .home-textContainer{
+    width: 350px;
+  }
+}

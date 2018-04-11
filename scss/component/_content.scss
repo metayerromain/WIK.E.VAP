@@ -1,22 +1,128 @@
 body{
   background-color: #FFD221;
   font-size: 16px;
-
+}
+.clope-Active{
+  &::after{
+    height: 50px !important;
+    opacity: 1 !important;
+  }
+  &::before{
+    height: 50px !important;
+    opacity: 1 !important;
+  }
+}
+.reverse{
+  flex-direction: row-reverse;
 }
 .Component{
-  background-color: #FFF;
-  width: 350px;
-  font-family: "raleway";
-  &-Title{
-    padding-top: 50px;
-    font-family: "Montserrat";
-    font-weight: bolder;
-    font-size: 36px;
+  display: flex;
+  height: 100vh;
+  justify-content: space-around;
+  align-items: center;
+  width: 87%;
+  &-Container{
+    background-color: #FFF;
+    width: 350px;
+    font-family: "raleway";
+    z-index: 1;
+    &-Title{
+      width: 90%;
+      margin: auto;
+      padding-top: 40px;
+      font-family: "Montserrat";
+      font-weight: bolder;
+      font-size: 36px;
+      position: relative;
+      &::after{
+        content: "";
+        display: block;
+        margin-left: 40px;
+        width: 200px;
+        height: 20px;
+        bottom: 0px;
+        z-index: -3;
+        background-color: #FDE74C;
+        position: absolute;
+        transition: height .3s;
+      }
+      &:hover:after{
+        height: 30px;
+      }
+    }
+    &-Infos{
+      width: 90%;
+      line-height: 150%;
+      margin: 50px 0 0 20px;
+      padding-bottom: 110px;
+    }
   }
-  &-Infos{
-    width: 90%;
-    line-height: 150%;
-    margin: 50px 0 0 20px;
-    padding-bottom: 100px;
+.Clope{
+  border: 45px rgba(255,215,56,.83) solid;
+  border-radius: 50%;
+  width: 674px;
+  height: 674px;
+  position: relative;
+  &::before{
+    content: "";
+    display: block;
+    width: 6px;
+    height: 0px;
+    opacity: 0;
+    background-color: #000;
+    position: absolute;
+    top: 100px;
+    right: 35%;
+    transition: height 1s, opacity 1s;
+  }
+  &::after{
+    content: "";
+    display: block;
+    width: 6px;
+    height: 0px;
+    opacity: 0;
+    background-color: #000;
+    position: absolute;
+    bottom: 100px;
+    left: 35%;
+    transition: height 1s, opacity 1s;
+  }
+}
+.Clope-Image-Container{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.img-Container{
+  position: absolute;
+  width: 70%;
+  height: auto;
+  margin: 50% auto 0;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%) rotate(30deg);
+  img{
+    width: 100%;
+  }
+}
+}
+.Navigation{
+  height: 100vh;
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  right: 5%;
+  transition: opacity .4s;
+  .Round-Container{
+    margin-top: 50vh;
+    transform: translateY(-50%);
+    &-Round{
+      margin-bottom: 60px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: block;
+      background-color: white;
+    }
   }
 }
