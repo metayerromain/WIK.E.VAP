@@ -1,0 +1,20 @@
+body {
+  background-color: #FFD221;
+  font-size: 16px; }
+
+.Component {
+  background-color: #FFF;
+  width: 350px;
+  font-family: "raleway"; }
+  .Component-Title {
+    padding-top: 50px;
+    font-family: "Montserrat";
+    font-weight: bolder;
+    font-size: 36px; }
+  .Component-Infos {
+    width: 90%;
+    line-height: 150%;
+    margin: 50px 0 0 20px;
+    padding-bottom: 100px; }
+
+/*# sourceMappingURL=main.css.map */
