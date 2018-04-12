@@ -95,3 +95,30 @@ function parallaxbubbles() {
 window.addEventListener('scroll', function() {
   requestAnimationFrame(parallaxbubbles)
 }, false);
+
+// E-CIGARETTE ANIM
+
+var clope1 = document.querySelectorAll('.clope1 > div');
+var clope2 = document.querySelectorAll('.clope2 > div');
+var clope3 = document.querySelectorAll('.clope3 > div');
+var clope4 = document.querySelectorAll('.clope4 > div');
+
+window.addEventListener('scroll', function() {
+  for (var i = 0; i < component.length; i++) {
+    var componentTop = component[i].offsetTop;
+    for (var a = 0; a < clope1.length; a++) {
+      if (window.scrollY >= componentTop - 200 && i == 0) {
+        clope1[a].classList.add('img-Active');
+      }
+      else if (window.scrollY >= componentTop - 200 && i == 1) {
+        clope2[a].classList.add('img-Active');
+      }
+      else if (window.scrollY >= componentTop - 200 && i == 2) {
+        clope3[a].classList.add('img-Active');
+      }
+      else if (window.scrollY >= componentTop - 200 && i == 3) {
+        clope4[a].classList.add('img-Active');
+      }
+    }
+  }
+});

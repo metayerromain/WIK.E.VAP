@@ -88,7 +88,22 @@ body {
     margin: 50% auto 0;
     left: 0;
     right: 0;
-    transform: translateY(-50%) rotate(30deg); }
+    transform: translateY(-50%) rotate(30deg);
+    display: none; }
+  .Component .img-Active {
+    animation: clopeAnim 2s;
+    display: block;
+  }
+  @keyframes clopeAnim {
+    from
+    {
+      margin: 90% auto 0;
+    }
+    to
+    {
+      margin: 50% auto 0;
+    }
+  }
     .Component .img-Container img {
       width: 100%; }
 
@@ -333,5 +348,4 @@ body {
   line-height: 150%; }
 .home .home-textContainer {
   width: 350px; }
-
 /*# sourceMappingURL=main.css.map */
