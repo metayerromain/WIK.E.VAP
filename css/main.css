@@ -1,6 +1,10 @@
 body {
   background-color: #FFD221;
-  font-size: 16px; }
+  font-size: 18px; }
+
+.img-Active {
+  animation: clopeAnim 1.2s;
+  display: block; }
 
 .clope-Active::after {
   height: 50px !important;
@@ -83,27 +87,14 @@ body {
     position: relative; }
   .Component .img-Container {
     position: absolute;
+    opacity: .2;
     width: 70%;
     height: auto;
     margin: 50% auto 0;
     left: 0;
     right: 0;
     transform: translateY(-50%) rotate(30deg);
-    display: none; }
-  .Component .img-Active {
-    animation: clopeAnim 2s;
-    display: block;
-  }
-  @keyframes clopeAnim {
-    from
-    {
-      margin: 90% auto 0;
-    }
-    to
-    {
-      margin: 50% auto 0;
-    }
-  }
+    transition: opacity 1s; }
     .Component .img-Container img {
       width: 100%; }
 
@@ -125,6 +116,11 @@ body {
       display: block;
       background-color: white; }
 
+@keyframes clopeAnim {
+  from {
+    margin: 90% auto 0; }
+  to {
+    margin: 50% auto 0; } }
 .bubble1 {
   position: absolute;
   z-index: -1;
@@ -246,6 +242,39 @@ body {
   margin-top: 270%;
   right: 200px; }
 
+.bubble12 {
+  z-index: -1;
+  position: absolute;
+  width: 60px;
+  opacity: 0.05;
+  border-radius: 100%;
+  border: 7px solid #003049;
+  height: 60px;
+  margin-top: 10%;
+  right: 200px; }
+
+.bubble13 {
+  z-index: -1;
+  position: absolute;
+  width: 60px;
+  opacity: 0.05;
+  border-radius: 100%;
+  border: 7px solid #003049;
+  height: 60px;
+  margin-top: 20%;
+  left: 200px; }
+
+.bubble14 {
+  z-index: -1;
+  position: absolute;
+  width: 100px;
+  opacity: 0.05;
+  border-radius: 100%;
+  border: 7px solid #003049;
+  height: 100px;
+  margin-top: 43%;
+  left: 400px; }
+
 .header {
   margin: auto;
   position: fixed;
@@ -286,8 +315,10 @@ body {
   position: absolute;
   margin: 50% auto 0;
   left: 0;
+  opacity: 0;
   right: 0;
-  transform: translateY(-50%); }
+  transform: translateY(-50%);
+  transition: opacity 1.5s; }
 .home-imgContainer {
   border: 45px rgba(255, 215, 56, 0.83) solid;
   border-radius: 50%;
@@ -343,9 +374,172 @@ body {
     height: 30px; }
 .home-explication {
   font-family: "raleway";
+  font-weight: 500;
   font-size: 16px;
   width: 300px;
   line-height: 150%; }
 .home .home-textContainer {
   width: 350px; }
+
+.formulaire {
+  top: 50vh;
+  transform: translateY(-50%);
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  width: 1509px; }
+  .formulaire-title {
+    font-size: 50px;
+    margin-bottom: 120px;
+    font-family: "Montserrat";
+    font-weight: bolder; }
+  .formulaire-inputContainer {
+    display: flex;
+    align-items: center; }
+  .formulaire-input {
+    border: none;
+    -moz-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
+    height: 55px;
+    width: 300px;
+    margin-top: 37px;
+    margin-bottom: 47px;
+    margin-right: 20px;
+    padding-left: 15px;
+    font-size: 14px; }
+  .formulaire-textarea {
+    border: none;
+    -moz-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
+    resize: none;
+    font-size: 14px;
+    padding: 30px 0 0 30px; }
+  .formulaire-submit {
+    position: relative;
+    border: none;
+    height: 60px;
+    width: 60px;
+    background-color: #003049;
+    color: white;
+    right: 30px;
+    transition: all .5s; }
+    .formulaire-submit:hover {
+      transform: scale(1.2); }
+
+.msg {
+  width: 100vw;
+  height: 100vh;
+  display: flex; }
+  .msg-title {
+    font-size: 40px;
+    justify-content: center;
+    align-items: center; }
+
+.Footer {
+  width: 100%;
+  padding: 30px 0;
+  margin-top: 10vh;
+  display: flex;
+  background-color: #FFD738; }
+
+.Footer-item {
+  width: 70%;
+  height: 100px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-right: 3px solid black; }
+
+.Icone {
+  width: 40px; }
+
+.Footer-contact {
+  font-family: "Montserrat";
+  font-weight: bolder;
+  line-height: 100px;
+  margin: 0 auto;
+  width: 30%;
+  text-align: center;
+  font-size: 20px;
+  transition: all .3s ease-out; }
+  .Footer-contact:hover {
+    opacity: .7; }
+
+.modalPayment {
+  background-color: #FFD221;
+  z-index: 10000;
+  width: 40%;
+  height: 50%;
+  position: fixed;
+  top: 50vh;
+  transform: translateY(-50%);
+  margin: auto;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16); }
+  .modalPayment-FirstCard {
+    height: 50%;
+    width: 60%;
+    background-color: #FFF;
+    position: relative;
+    top: 15%;
+    left: 10%;
+    border-radius: 5px; }
+    .modalPayment-FirstCard-imgContainer {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      width: 48px;
+      height: 48px; }
+      .modalPayment-FirstCard-imgContainer img {
+        width: 100%;
+        height: auto; }
+    .modalPayment-FirstCard-Content {
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 60px;
+      width: 90%; }
+      .modalPayment-FirstCard-Content-Title {
+        font-family: "Montserrat";
+        font-weight: lighter;
+        font-size: 12px;
+        margin-bottom: 10px; }
+      .modalPayment-FirstCard-Content .packageInput-item {
+        width: 15px;
+        height: 20px;
+        border: 1px solid grey;
+        margin-right: 5px; }
+      .modalPayment-FirstCard-Content-inputContainer {
+        display: flex;
+        width: 90%;
+        justify-content: space-between; }
+        .modalPayment-FirstCard-Content-inputContainer .packageInput {
+          display: flex;
+          justify-content: space-between; }
+      .modalPayment-FirstCard-Content-SecondContainer {
+        margin-top: 20px;
+        display: flex;
+        align-items: center; }
+        .modalPayment-FirstCard-Content-SecondContainer .expireText {
+          font-family: "Montserrat";
+          font-size: 12px;
+          font-weight: lighter;
+          margin-right: 10px; }
+        .modalPayment-FirstCard-Content-SecondContainer .slash {
+          font-size: 25px;
+          margin: 0 10px;
+          color: grey;
+          font-family: "Montserrat";
+          font-weight: lighter; }
+
+::selection {
+  background-color: #FDE74C;
+  color: #FFF; }
+
 /*# sourceMappingURL=main.css.map */

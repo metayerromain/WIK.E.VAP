@@ -2,3 +2,13 @@
 @import "component/_bubbles";
 @import "component/_header";
 @import "component/_home";
+@import "component/_contact";
+@import "component/_msg";
+@import "component/_footer";
+@import "component/_modal";
+
+
+::selection{
+  background-color: #FDE74C;
+  color: #FFF;
+}

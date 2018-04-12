@@ -1,9 +1,23 @@
 var home = document.querySelector('.home-imgContainer');
+var homeImg = document.querySelector('.home-img');
 var clope = document.querySelectorAll('.Clope');
 var nav = document.querySelector('.Navigation');
+var piecesClope = document.querySelectorAll('.Clope-Image-Container');
 var component = document.querySelectorAll('.Component');
 var roundButtons = document.querySelectorAll('.Round-Container-Round');
 var componentHeight = component[0].offsetTop - 300;
+
+//ANIMATION AU LANCEMENT (SUR LA HOMEPAGE)
+
+setTimeout(function(){
+  home.classList.add("is-Active");
+}, 200);
+
+setTimeout(function(){
+  homeImg.style.opacity = "1";
+}, 400)
+
+//AFFICHAGE DE LA NAVIGATION QUAND ON PASSE LA HOMEPAGE
 
 window.addEventListener("scroll", function(e){
   if (window.scrollY >= componentHeight) {
@@ -14,6 +28,8 @@ window.addEventListener("scroll", function(e){
   }
 });
 
+//ANIMATION AU CLIC SUR LA NAV
+
 for (var i = 0; i < roundButtons.length; i++) {
   roundButtons[i].addEventListener("click", function(){
     for (var i = 0; i < roundButtons.length; i++) {
@@ -23,24 +39,55 @@ for (var i = 0; i < roundButtons.length; i++) {
   });
 }
 
+//ANIMATION SUR LES ELEMENTS STATIQUES AU SCROLL
+
+var allpieces;
 window.addEventListener("scroll", function(){
   for (var i = 0; i < component.length; i++) {
     var componentTop = component[i].offsetTop;
-    if (window.scrollY >= componentTop - 200) {
+    if (window.scrollY >= componentTop - 400 || window.scrollY <= 400) {
+      allpieces = piecesClope[i].children;
+
+      for (var y = 0; y < piecesClope.length; y++) {
+        piecesClope[y].children[y].style.opacity = ".2";
+      }
       for (var a = 0; a < roundButtons.length; a++) {
         clope[a].classList.remove("clope-Active");
         roundButtons[a].style.backgroundColor = "#FFF";
       }
+      allpieces[i].style.opacity = "1";
       clope[i].classList.add("clope-Active");
       roundButtons[i].style.backgroundColor = "#003049";
     }
   }
 });
 
-setTimeout(function(){
-  home.classList.add("is-Active");
-}, 200);
+// E-CIGARETTE ANIM
 
+var clope1 = document.querySelectorAll('.clope1 > div');
+var clope2 = document.querySelectorAll('.clope2 > div');
+var clope3 = document.querySelectorAll('.clope3 > div');
+var clope4 = document.querySelectorAll('.clope4 > div');
+
+window.addEventListener('scroll', function() {
+  for (var i = 0; i < component.length; i++) {
+    var componentTop = component[i].offsetTop;
+    for (var a = 0; a < clope1.length; a++) {
+      if (window.scrollY >= componentTop - 600 && i == 0) {
+        clope1[a].classList.add('img-Active');
+      }
+      if (window.scrollY >= componentTop - 600 && i == 1) {
+        clope2[a].classList.add('img-Active');
+      }
+      if (window.scrollY >= componentTop - 600 && i == 2) {
+        clope3[a].classList.add('img-Active');
+      }
+      if (window.scrollY >= componentTop - 600 && i == 3) {
+        clope4[a].classList.add('img-Active');
+      }
+    }
+  }
+});
 
 // SMOOTH SCROLLING
 
@@ -95,30 +142,3 @@ function parallaxbubbles() {
 window.addEventListener('scroll', function() {
   requestAnimationFrame(parallaxbubbles)
 }, false);
-
-// E-CIGARETTE ANIM
-
-var clope1 = document.querySelectorAll('.clope1 > div');
-var clope2 = document.querySelectorAll('.clope2 > div');
-var clope3 = document.querySelectorAll('.clope3 > div');
-var clope4 = document.querySelectorAll('.clope4 > div');
-
-window.addEventListener('scroll', function() {
-  for (var i = 0; i < component.length; i++) {
-    var componentTop = component[i].offsetTop;
-    for (var a = 0; a < clope1.length; a++) {
-      if (window.scrollY >= componentTop - 200 && i == 0) {
-        clope1[a].classList.add('img-Active');
-      }
-      else if (window.scrollY >= componentTop - 200 && i == 1) {
-        clope2[a].classList.add('img-Active');
-      }
-      else if (window.scrollY >= componentTop - 200 && i == 2) {
-        clope3[a].classList.add('img-Active');
-      }
-      else if (window.scrollY >= componentTop - 200 && i == 3) {
-        clope4[a].classList.add('img-Active');
-      }
-    }
-  }
-});

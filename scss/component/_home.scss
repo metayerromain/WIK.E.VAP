@@ -12,8 +12,10 @@
     position: absolute;
     margin: 50% auto 0;
     left: 0;
+    opacity: 0;
     right: 0;
     transform: translateY(-50%);
+    transition: opacity 1.5s;
   }
   &-imgContainer{
     border: 45px rgba(255,215,56,.83) solid;
@@ -77,6 +79,7 @@
   }
   &-explication{
     font-family: "raleway";
+    font-weight: 500;
     font-size: 16px;
     width: 300px;
     line-height: 150%;

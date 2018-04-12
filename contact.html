@@ -1,0 +1,45 @@
+<head>
+  <meta charset="utf-8">
+  <title>Simpl-e</title>
+  <link rel="stylesheet" href="scss/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="bubble13" id="bubble13"></div>
+  <div class="bubble12" id="bubble12"></div>
+  <div class="bubble14" id="bubble14"></div>
+
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html"><h1 class="header-logo">Simpl.e</h1></a>
+      <a class="header-link" href="#">Créer</a>
+    </div>
+  </header>
+
+  <section class="formulaire">
+    <h2 class="formulaire-title">Contactez-nous</h2>
+    <form class="formulaire-contact" action="php/action.php" method="post">
+      <ul class="formulaire-inputContainer">
+        <div class="formulaire-infoContainer">
+          <li>
+            <input class="formulaire-input" placeholder="nom" type="text" name="nom" />
+            <input class="formulaire-input" placeholder="prénom" type="text" name="prénom" />
+          </li>
+
+          <li>
+            <input class="formulaire-input" placeholder="email" type="email" name="email" />
+            <input class="formulaire-input" placeholder="sujet" type="text" name="sujet" />
+          </li>
+        </div>
+
+        <li>
+          <textarea class="formulaire-textarea" placeholder="Ecris ton commentaire" name="message" cols="80" rows="10"></textarea>
+        </li>
+        <li>
+          <input class="formulaire-submit" type="submit" value=">">
+        </li>
+      </ul>
+    </form>
+  </section>
+</body>

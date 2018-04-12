@@ -1,0 +1,54 @@
+.formulaire{
+  top: 50vh;
+  transform: translateY(-50%);
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  width: 1509px;
+  &-title{
+    font-size: 50px;
+    margin-bottom: 120px;
+    font-family: "Montserrat";
+    font-weight: bolder;
+  }
+  &-inputContainer{
+    display: flex;
+    align-items: center;
+  }
+  &-input{
+    border: none;
+    -moz-box-shadow: 0px 0px 7px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0px 0px 7px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 7px rgba(0,0,0,0.1);
+    height: 55px;
+    width: 300px;
+    margin-top: 37px;
+    margin-bottom: 47px;
+    margin-right: 20px;
+    padding-left: 15px;
+    font-size: 14px;
+  }
+  &-textarea{
+    border: none;
+    -moz-box-shadow: 0px 0px 7px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0px 0px 7px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 7px rgba(0,0,0,0.1);
+    resize: none;
+    font-size: 14px;
+    padding: 30px 0 0 30px;
+  }
+  &-submit{
+    position: relative;
+    border: none;
+    height: 60px;
+    width: 60px;
+    background-color: #003049;
+    color: white;
+    right: 30px;
+    transition: all .5s;
+    &:hover{
+      transform: scale(1.2);
+    }
+  }
+}

@@ -1,7 +1,11 @@
 body{
   background-color: #FFD221;
-  font-size: 16px;
+  font-size: 18px;
 }
+.img-Active {
+    animation: clopeAnim 1.2s;
+    display: block;
+  }
 .clope-Active{
   &::after{
     height: 50px !important;
@@ -95,12 +99,14 @@ body{
 }
 .img-Container{
   position: absolute;
+  opacity: .2;
   width: 70%;
   height: auto;
   margin: 50% auto 0;
   left: 0;
   right: 0;
   transform: translateY(-50%) rotate(30deg);
+  transition: opacity 1s;
   img{
     width: 100%;
   }
@@ -124,5 +130,16 @@ body{
       display: block;
       background-color: white;
     }
+  }
+}
+
+@keyframes clopeAnim {
+  from
+  {
+    margin: 90% auto 0;
+  }
+  to
+  {
+    margin: 50% auto 0;
   }
 }
