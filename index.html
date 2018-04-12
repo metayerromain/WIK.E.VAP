@@ -169,13 +169,13 @@
       </div>
     </div>
     <div class="Footer-contact ">
-      <a href="contact.html">
+      <a href="php/contact.php">
         <p>Contactez nous !</p>
       </a>
     </div>
   </footer>
 
-  <section class="modalPayment">
+  <section class="modalPayment payment1">
     <div class="modalPayment-FirstCard">
       <div class="modalPayment-FirstCard-imgContainer">
         <img src="img/ccv-logo.png" alt="ccv">
@@ -219,6 +219,45 @@
           <input class="firstName" type="text" placeholder="PRENOM">
         </div>
       </div>
+    </div>
+    <div class="modalPayment-secondCard">
+      <hr class="modalPayment-secondCard-Bande">
+      <div class="containerCVV">
+        <p class="CVV">CVV</p>
+        <input type="text" name="" value="" maxlength="3">
+      </div>
+    </div>
+    <div class="footerCard">
+      <div class="left">
+        <div class="round round1 paymentRound-active"></div>
+        <hr class="traitRound">
+        <div class="round round2"></div>
+      </div>
+      <div class="right">
+        <p>Suivant</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="modalPayment payment2">
+    <div class="payment2-Container">
+      <input class="payment2-Container-item" type="text" placeholder="Adresse">
+      <div class="payment2-Flex">
+        <input class="payment2-Container-item2" type="text" placeholder="Ville">
+        <input class="payment2-Container-item3" type="text" placeholder="Code Postal">
+      </div>
+      <input class="payment2-Container-item4" type="text" placeholder="Telephone">
+    </div>
+    <div class="footerCard">
+      <div class="left">
+        <div class="round round1"></div>
+        <hr class="traitRound">
+        <div class="round round2 paymentRound-active"></div>
+      </div>
+      <div class="right">
+        <p>Suivant</p>
+      </div>
+    </div>
   </section>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js "></script>

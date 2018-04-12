@@ -2,6 +2,10 @@ var home = document.querySelector('.home-imgContainer');
 var homeImg = document.querySelector('.home-img');
 var clope = document.querySelectorAll('.Clope');
 var nav = document.querySelector('.Navigation');
+var payment1 = document.querySelector('.payment1');
+var payment2 = document.querySelector('.payment2');
+var modals = document.querySelectorAll('.modalPayment');
+var paymentButton = document.querySelectorAll('.right');
 var piecesClope = document.querySelectorAll('.Clope-Image-Container');
 var component = document.querySelectorAll('.Component');
 var roundButtons = document.querySelectorAll('.Round-Container-Round');
@@ -61,6 +65,17 @@ window.addEventListener("scroll", function(){
     }
   }
 });
+
+paymentButton[0].addEventListener("click", function(){
+  payment1.style.display = "none";
+  payment2.style.display = "block";
+});
+paymentButton[1].addEventListener("click", function(){
+  for (var i = 0; i < modals.length; i++) {
+    modals[i].style.display = "none";
+  }
+  window.location.href = "../index.html";
+})
 
 // E-CIGARETTE ANIM
 
