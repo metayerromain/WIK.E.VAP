@@ -1,4 +1,16 @@
+.buttonModal{
+  position: absolute;
+  margin:50px 0;
+  right: 19.5%;
+  background-color: #FFF;
+  color: #000;
+  font-family: "Montserrat";
+  font-weight: bold;
+  padding: 20px;
+  cursor: pointer;
+}
 .payment1{
+  display: none;
 }
 .modalPayment{
   display: none;
@@ -224,4 +236,60 @@
 }
 .paymentRound-active{
   background-color: #003049 !important;
+}
+.payment3{
+  display: none;
+  &-Container{
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 80%;
+    margin: auto;
+    font-family: "Montserrat";
+    font-weight: bolder;
+    height: 70%;
+    &-Title{
+    }
+    &-row{
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      input{
+        &::placeholder{
+          font-size: 14px;
+        }
+        border: none;
+        padding: 20px;
+        width: 45%;
+      }
+      .priceText{
+        font-size: 32px;
+      }
+    }
+    .footerCard{
+      width: 100%;
+      justify-content: space-between;
+    }
+    .totalPrice{
+      font-size: 32px;
+    }
+  }
+}
+.payment4{
+  display: none;
+  &-Container{
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 80%;
+    margin: auto;
+    font-family: "Montserrat";
+    font-weight: bolder;
+    height: 40%;
+  }
+  .finishMessage{
+    margin-top: 10px;
+    text-align: center;
+  }
 }

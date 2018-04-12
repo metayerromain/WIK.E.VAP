@@ -1,0 +1,14 @@
+{
+"companyName": "HETIC",
+"productName": "Projet E Cig",
+"dataUrl": "projet_e_cig.data.unityweb",
+"asmCodeUrl": "projet_e_cig.asm.code.unityweb",
+"asmMemoryUrl": "projet_e_cig.asm.memory.unityweb",
+"asmFrameworkUrl": "projet_e_cig.asm.framework.unityweb",
+"asmLibraryUrl": "projet_e_cig.asm.library.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}

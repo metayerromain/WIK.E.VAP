@@ -6,6 +6,8 @@
   <title>Simpl-e</title>
   <link rel="stylesheet" href="scss/reset.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="TemplateData/player.css">
+
 </head>
 
 <body>
@@ -24,7 +26,7 @@
   <header class="header">
     <div class="header-content">
       <a href="index.html"><h1 class="header-logo">Simpl.e</h1></a>
-      <a class="header-link" href="#">Créer</a>
+      <a class="js-scrollTo header-link" href="#page-5">Créer</a>
     </div>
   </header>
 
@@ -62,7 +64,7 @@
   <section class="Component container" id="page-1">
     <div class="Component-Container">
       <div class="Component-Container-Title">La batterie</div>
-      <div class="Component-Container-Infos">Plus l’autonnomie de la batterie est élévé plus la vapeur sera importante les grandes batterie seront pour les gros fumeurs, et vis versa</div>
+      <div class="Component-Container-Infos">Plus l’autonomie de la batterie est élévée plus la vapeur sera importante les grandes batterie seront pour les gros fumeurs, et vis versa</div>
     </div>
     <div class="Clope">
       <div class="Clope-Image-Container clope1">
@@ -85,7 +87,7 @@
   <section class="Component container reverse" id="page-2">
     <div class="Component-Container">
       <div class="Component-Container-Title">La base</div>
-      <div class="Component-Container-Infos">Permet de relier le clearomiseur a la batterie et pour les modèle les plus recent integre une bague de réglage d’entrée d’air (airflow)</div>
+      <div class="Component-Container-Infos">Permet de relier le clearomiseur à la batterie et pour les modèles les plus récents intègres une bague de réglage d’entrée d’air (airflow)</div>
     </div>
     <div class="Clope">
       <div class="Clope-Image-Container clope2">
@@ -133,7 +135,7 @@
   <section class="Component container reverse" id="page-4">
     <div class="Component-Container">
       <div class="Component-Container-Title">Le drip tips</div>
-      <div class="Component-Container-Infos">C’est l’accesoire indispensable aux atomiseurs, il peut avoir une icidence sur la manière de vapoter. Il est situé entre l’atomiseur et les papilles de la langue, plus le drip tips et monté près de l’atomiseur plus la vapeur seras ressentis comme
+      <div class="Component-Container-Infos">C’est l’accesoire indispensable aux atomiseurs, il peut avoir une incidence sur la manière de vapoter. Il est situé entre l’atomiseur et les papilles de la langue, plus le drip tips et monté près de l’atomiseur plus la vapeur seras ressentis comme
         chaude.
 
       </div>
@@ -155,6 +157,14 @@
       </div>
     </div>
   </section>
+
+  <section class="webgl-container" id="page-5">
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 1024px; height: 576px"></div>
+    </div>
+  </section>
+
+  <div class="buttonModal">Terminer</div>
 
   <footer class="Footer">
     <div class="Footer-item">
@@ -234,7 +244,7 @@
         <div class="round round2"></div>
       </div>
       <div class="right">
-        <p>Suivant</p>
+        <p>Terminé</p>
       </div>
     </div>
   </section>
@@ -260,8 +270,54 @@
     </div>
   </section>
 
+  <section class="modalPayment payment3">
+    <div class="payment3-Container">
+      <h2 class="payment3-Container-Title">Récapitulatif de la commande :</h2>
+      <div class="payment3-Container-row">
+        <input type="text" value="clearomiseur">
+        <p class="priceText">39€</p>
+      </div>
+      <div class="payment3-Container-row">
+        <input type="text" value="Box">
+        <p class="priceText">72€</p>
+      </div>
+      <div class="footerCard">
+        <div class="left">
+          <p class="totalPrice">Total : <span>111€</span></p>
+        </div>
+        <div class="right">
+          <p>Suivant</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="modalPayment payment4">
+    <div class="payment4-Container">
+      <p class="finishMessage">
+        Merci d'avoir commandé sur notre site.
+      </p>
+      <p class="finishMessage">
+        Nous vous envoyons un mail de confirmation.
+      </p>
+      <div class="footerCard">
+        <div class="right">
+          <p>Retour</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js "></script>
   <script src="js/main.js "></script>
+  <script src="TemplateData/UnityProgress.js"></script>
+  <script src="Build/UnityLoader.js"></script>
+  <script>
+    var gameInstance = UnityLoader.instantiate("gameContainer", "Build/projet_e_cig.json", {
+      onProgress: UnityProgress
+    });
+  </script>
 </body>
 
 </html>

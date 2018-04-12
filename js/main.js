@@ -4,6 +4,9 @@ var clope = document.querySelectorAll('.Clope');
 var nav = document.querySelector('.Navigation');
 var payment1 = document.querySelector('.payment1');
 var payment2 = document.querySelector('.payment2');
+var payment3 = document.querySelector('.payment3');
+var payment4 = document.querySelector('.payment4');
+var buttonModal = document.querySelector('.buttonModal');
 var modals = document.querySelectorAll('.modalPayment');
 var paymentButton = document.querySelectorAll('.right');
 var piecesClope = document.querySelectorAll('.Clope-Image-Container');
@@ -65,17 +68,29 @@ window.addEventListener("scroll", function(){
     }
   }
 });
-
-paymentButton[0].addEventListener("click", function(){
-  payment1.style.display = "none";
+buttonModal.addEventListener("click", function(){
+  modals[2].style.display = "block";
+});
+paymentButton[2].addEventListener("click", function(){
+  payment3.style.display = "none";
   payment2.style.display = "block";
 });
 paymentButton[1].addEventListener("click", function(){
+  payment2.style.display = "none";
+  payment1.style.display = "block";
+});
+//bouton Terminer
+paymentButton[0].addEventListener("click", function(){
+  payment1.style.display = "none";
+  payment4.style.display = "block";
+});
+paymentButton[3].addEventListener("click", function(){
   for (var i = 0; i < modals.length; i++) {
     modals[i].style.display = "none";
   }
-  window.location.href = "../index.html";
+  window.location.href = "#";
 })
+
 
 // E-CIGARETTE ANIM
 
